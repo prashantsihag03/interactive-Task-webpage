@@ -1,0 +1,125 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.Name {
+    text-align: center;
+    width: 10em;
+    margin: auto;
+}
+
+.menu {
+    text-align: center;
+    width: 10em;
+    margin: auto;
+}
+.menu > button {
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 0.4em;
+}
+.menu > button:hover {
+    cursor: pointer;
+}
+
+.menu > button:first-child {
+    background-color: darkgreen;
+    color: white;
+}
+
+.menu > button:last-child {
+    background-color: maroon;
+    color: white;
+}
+
+.content {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    margin: auto;
+    width: 40vw;
+    margin-top: 2em;
+    height: 40em;
+    overflow: hidden;
+
+}
+
+.newtask {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    width: 20em;
+    height: inherit;
+    align-items: center;
+    background-color: white;
+    z-index: -1;
+}
+
+.newtask > input,textarea {
+    font-size: 1em;
+    width: 50%;
+    padding: 0.5em 1em;
+    margin-bottom: 1em;
+    border: 1px solid lightgrey;
+    border-radius: 0.5em;
+    background-color: whitesmoke;
+}
+.newtask > input[type = "submit"] {
+    background-color: darkgreen;
+    color: white;
+}
+.tasks {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    flex-direction: column;
+    width: inherit;
+    height: inherit;
+    margin: auto;
+    background-color: white;
+}
+.tasks > h1 {
+    font-size: 1.5em;
+    font-variant: small-caps;
+    letter-spacing: 0.2em;
+    text-decoration: underline;
+}
+
+.t {
+    display: flex;
+    flex-direction: column;
+    background-color: green;
+    color: white;
+    padding: 0.5em;
+    min-height: auto;
+    max-height: 4em;
+    width: 10em;
+    min-width: auto;
+    max-width: 15em;
+    font-family: "Roboto Slab", serif;
+    border-radius: 0.8em;
+    overflow: hidden;
+    transition: all 1s ease-in-out 0s;
+    margin-bottom: 1em;
+}
+.t:hover {
+   cursor: pointer;
+}
+
+.t > h1 {
+    font-weight: bolder;
+    text-decoration: underline;
+    font-family: "Roboto Slab";
+    font-size: 2em;
+}
+.t > .deadline, .update {
+    font-size: 0.5em;
+}
+.t > .desc {
+    margin-top: 0.5em;
+    font-size: 0.8em;
+    z-index: -1;
+}
+
