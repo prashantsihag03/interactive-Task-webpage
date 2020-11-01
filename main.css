@@ -141,9 +141,10 @@
 .t > .deadline, .update {
     font-family: monospace;
     font-size: 0.6em;
+    margin-bottom: 0.2em;
 }
 .t > .desc {
-    margin-top: 0.5em;
+    margin-top: 1em;
     font-family: monospace;
     font-size: 0.8em;
     z-index: -1;
