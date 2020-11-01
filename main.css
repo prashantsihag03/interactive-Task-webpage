@@ -4,76 +4,91 @@
     box-sizing: border-box;
 }
 
+.container {
+    width: 100vw;
+    max-width: 1024px;
+    margin: auto;
+    margin-top: 2%;
+    /* background-color: darkolivegreen; */
+}
+
 .Name {
-    text-align: center;
-    width: 10em;
+    /* background-color: darkorange; */
+    font-family: serif;
+    font-variant: small-caps;
+    width: 100%;
     margin: auto;
 }
 
 .menu {
-    text-align: center;
-    width: 10em;
+    width: 100%;
     margin: auto;
 }
 .menu > button {
-    padding: 0.5em 1em;
+    min-width: 5em;
+    min-height: 2em;
     border: none;
     border-radius: 0.4em;
 }
-.menu > button:hover {
-    cursor: pointer;
-}
-
 .menu > button:first-child {
     background-color: darkgreen;
     color: white;
 }
-
+.menu > button:first-child:hover {
+    cursor: pointer;
+    border: 1px solid greenyellow;
+}
 .menu > button:last-child {
     background-color: maroon;
     color: white;
+}
+.menu > button:last-child:hover {
+    cursor: pointer;
+    border: 1px solid red;
 }
 
 .content {
     display: flex;
     position: relative;
-    justify-content: center;
-    margin: auto;
     width: 40vw;
     margin-top: 2em;
     height: 40em;
     overflow: hidden;
-
 }
 
 .newtask {
     display: flex;
     position: absolute;
     flex-direction: column;
-    width: 20em;
+    width: 100%;
     height: inherit;
-    align-items: center;
     background-color: white;
     z-index: -1;
 }
 
 .newtask > input,textarea {
     font-size: 1em;
-    width: 50%;
+    min-width: 10rem;
+    max-width: 20rem;
     padding: 0.5em 1em;
-    margin-bottom: 1em;
+    margin-top: 1em;
     border: 1px solid lightgrey;
     border-radius: 0.5em;
     background-color: whitesmoke;
 }
+.newtask > input:focus,textarea:focus {
+    outline: none;
+    border: 1px solid green;
+    
+}
 .newtask > input[type = "submit"] {
     background-color: darkgreen;
     color: white;
+    border: none;
 }
 .tasks {
     display: flex;
     position: absolute;
-    align-items: center;
     flex-direction: column;
     width: inherit;
     height: inherit;
@@ -85,6 +100,14 @@
     font-variant: small-caps;
     letter-spacing: 0.2em;
     text-decoration: underline;
+}
+
+.newtask > span {
+    font-size: 0.7em;
+    color: red;
+    font-family: monospace;
+    letter-spacing: 0.1em;
+    margin-left: 1em;
 }
 
 .t {

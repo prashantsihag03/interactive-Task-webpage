@@ -7,22 +7,24 @@
     <title>Todo App</title>
 </head>
 <body>
-    <h1 class="Name">Your Tasks</h1>
-    <nav class="menu">
-        <button>New</button>
-        <button>Delete</button>
-    </nav>
-    <section class="content">
-    <div class="tasks">
-        <h1>All tasks</h1>
-    </div>
-    <div class="newtask">
-        <input type="text" placeholder="Task Name">
-        <input type="date" placeholder="Deadline">
-        <textarea placeholder="Task description"></textarea>
-        <input type="submit" value="Add task" class="submittask">
-    </div> 
-    </section>
+    <main class="container">
+        <h1 class="Name">Tasks</h1>
+        <nav class="menu">
+            <button>New</button>
+            <button>Delete</button>
+        </nav>
+        <section class="content">
+            <div class="tasks">
+                <!-- <h1>Tasks:</h1> -->
+            </div>
+            <div class="newtask">
+                <input type="text" placeholder="Task Name"><span id="error-name"></span>
+                <input type="date" placeholder="Deadline"><span id="error-date"></span>
+                <textarea placeholder="Task description"></textarea><span id="error-desc"></span>
+                <input type="submit" value="Add task" class="submittask">
+            </div> 
+        </section>
+    </main>
 
 <script src="main.js"></script>  
 </body>

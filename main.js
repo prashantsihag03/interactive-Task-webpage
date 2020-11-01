@@ -80,7 +80,7 @@ function showtasks() {
         }
     } else {
         localStorage.setItem('totalTask', 0);
-        alert("No tasks available to show. Please create one by clicking on New button");
+        // alert("No tasks available to show. Please create one by clicking on New button");
     }
 };
 // displaying new task form.
@@ -92,10 +92,24 @@ document.querySelector('.menu button:first-child').addEventListener('click', fun
 document.querySelector('.submittask').addEventListener('click', function() {
     let taskcontainer = document.querySelector('.newtask');
     let name = taskcontainer.children[0].value;
-    let deadline = taskcontainer.children[1].value;
-    let desc = taskcontainer.children[2].value;
-    let newtaskadd = newtask(name, deadline, desc);
-    document.querySelector('.newtask').style.zIndex = "-1";
-    location.reload();
+    let deadline = taskcontainer.children[2].value;
+    let desc = taskcontainer.children[4].value;
+    let status = "";
+    for (let index = 0; index < 6; index=index+2) {
+        if (!(taskcontainer.children[index].value)) {
+            taskcontainer.children[index+1].innerHTML = "Provide valid input.";
+            status = "notok";
+        } else {
+            taskcontainer.children[index+1].innerHTML = "";
+            status = "ok"
+        }
+    };
+    if(status == "ok") {
+        let newtaskadd = newtask(name, deadline, desc);
+        document.querySelector('.newtask').style.zIndex = "-1";
+        location.reload();
+    } else {
+        console.log("Something went wrong");
+    } 
 });
 
