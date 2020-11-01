@@ -6,19 +6,18 @@
 
 .container {
     width: 100vw;
-    padding: 0.5em;
     max-width: 1024px;
     margin: auto;
     margin-top: 2%;
-    /* background-color: darkolivegreen; */
+    padding-left: 2em;
 }
 
 .Name {
-    /* background-color: darkorange; */
-    font-family: serif;
+    font-family: monospace;
     font-variant: small-caps;
     width: 100%;
     margin: auto;
+    
 }
 
 .menu {
@@ -119,9 +118,9 @@
     padding: 0.5em;
     min-height: auto;
     max-height: 4em;
-    width: 10em;
+    width: 15em;
     min-width: auto;
-    max-width: 15em;
+    max-width: 20em;
     font-family: "Roboto Slab", serif;
     border-radius: 0.8em;
     overflow: hidden;
@@ -134,15 +133,18 @@
 
 .t > h1 {
     font-weight: bolder;
-    text-decoration: underline;
-    font-family: "Roboto Slab";
-    font-size: 2em;
+    /* text-decoration: underline; */
+    font-family: monospace;
+    font-size: 1.5em;
+    letter-spacing: 0.2em;
 }
 .t > .deadline, .update {
-    font-size: 0.5em;
+    font-family: monospace;
+    font-size: 0.6em;
 }
 .t > .desc {
     margin-top: 0.5em;
+    font-family: monospace;
     font-size: 0.8em;
     z-index: -1;
 }
