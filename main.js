@@ -1,5 +1,5 @@
 // document onload event
-document.getElementsByTagName('body')[0].addEventListener("load", showlocalstore());
+document.getElementsByTagName('body')[0].addEventListener("load", showtasks());
 
 // function to create new task
 function newtask(name, duedate, desc) {
@@ -33,7 +33,7 @@ function displaytask (task) {
 
     // create deadline div and append to 't'.
     // preparing strings for html textnode
-    let deadline = `Deadline: ${task.deadline}`;
+    let deadline = `Due: ${task.deadline}`;
     let carddeadline = document.createElement('div');
     carddeadline.className = 'deadline';
     carddeadline.appendChild(document.createTextNode(deadline));
@@ -114,10 +114,10 @@ document.querySelector('.submittask').addEventListener('click', function() {
 });
 
 
-function showlocalstore() {
-    var keys = Object.keys(localStorage),
-        i = keys.length;
-    while (i--) {
-        console.log(keys[i]);
-    }
-}
+// function showlocalstore() {
+//     var keys = Object.keys(localStorage),
+//         i = keys.length;
+//     while (i--) {
+//         console.log(keys[i]);
+//     }
+// }
