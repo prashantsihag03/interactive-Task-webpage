@@ -64,7 +64,7 @@
     flex-direction: column;
     width: 100%;
     height: inherit;
-    background-color: white;
+    background-color: red;
     z-index: -1;
 }
 
@@ -115,7 +115,7 @@
 .t {
     display: flex;
     flex-direction: column;
-    background-color: green;
+    background-color: rgb(37, 50, 92);
     color: white;
     padding: 0.6rem 1.25rem;
     min-height: auto;

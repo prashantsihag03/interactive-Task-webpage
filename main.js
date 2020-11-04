@@ -1,5 +1,5 @@
 // document onload event
-document.getElementsByTagName('body')[0].addEventListener("load", showtasks());
+document.getElementsByTagName('body')[0].addEventListener("load", showlocalstore());
 
 // function to create new task
 function newtask(name, duedate, desc) {
@@ -113,3 +113,11 @@ document.querySelector('.submittask').addEventListener('click', function() {
     } 
 });
 
+
+function showlocalstore() {
+    var keys = Object.keys(localStorage),
+        i = keys.length;
+    while (i--) {
+        console.log(keys[i]);
+    }
+}
